@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Powered Automatic Roster Management</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  /* footer ah always keela thalli vaikka */
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  #auth, #app {
+    flex: 1;
+  }
+
+  .site-footer {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 13px;
+    opacity: 0.8;
+  }
+  .site-footer b { font-weight: 600; }
+</style>
+</head>
+<body>
+<!-- LOGIN / CREATE ACCOUNT -->
+<div id="auth">
+  <div class="auth-card">
+    <div class="logo"></div>
+    <h1>SXVD</h1>
+    <p id="authTitle">Login to continue</p>
+    <input id="u" placeholder="Username">
+    <input id="p" type="password" placeholder="Password">
+    <input id="p2" type="password" placeholder="Confirm Password" class="hide">
+    <select id="r"><option>Manager</option><option>TL</option><option>HR</option></select>
+    <button id="authBtn" class="btn grad">🔐 Login</button>
+    <a id="authSwitch" href="#">Create Account</a>
+    <small id="authMsg"></small>
+  </div>
+</div>
+
+<!-- MAIN APP -->
+<div id="app" class="hide">
+  <aside>
+    <div class="brand"><span></span><b>SXVD<br>ROSTER</b></div>
+    <nav id="nav"></nav>
+    <button id="logout" class="btn ghost">Logout</button>
+  </aside>
+  <main>
+    <header><h2 id="pageTitle"></h2><span id="who" class="pill"></span></header>
+    <div id="view"></div>
+  </main>
+</div>
+
+<!-- FOOTER: page-oda kadaisila, content-oda scroll aagum -->
+<footer class="site-footer">@Powered by <b>Dhanusri</b></footer>
+
+<script src="script.js"></script>
+</body>
+</html>
